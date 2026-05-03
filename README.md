@@ -100,7 +100,7 @@ langchain_basics/
 ### 1. Clone repo
 
 ```bash
-git clone <your-repo>
+git clone https://github.com/rockcoding5/langchain_basics.git
 cd langchain_basics
 ```
 
