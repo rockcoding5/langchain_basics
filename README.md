@@ -255,7 +255,7 @@ streamlit run app_ui/restaurant_generator.py
 ## 🧠 Key Learnings
 
 ### Core Concepts
-* **Modern LangChain** uses **LCEL (| operator)** instead of old chains
+* **Modern LangChain** uses **LCEL (LangChain Expression Language | operator)** instead of old chains
 * **Memory** is just **message passing**, not magic
 * **Agents** = **LLM + tools + reasoning loop**
 * **Token control** is critical (sliding window pattern)
