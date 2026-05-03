@@ -106,16 +106,54 @@ cd langchain_basics
 
 ### 2. Install dependencies
 
-Using pip:
+#### Option A: Using uv (Recommended)
 
 ```bash
-pip install -r requirements.txt
+# Install Python 3.11 with uv
+uv python install 3.11
+
+# Create virtual environment
+uv venv --python 3.11
+
+# Activate virtual environment
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+# Upgrade pip (optional but recommended)
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+
+# Install dependencies
+uv sync
 ```
 
-Using uv (recommended):
+**Why `uv sync`?**
+- `uv sync` reads `pyproject.toml` and `uv.lock` files
+- Creates exact, reproducible environments
+- Faster than pip with better dependency resolution
+- Automatically handles virtual environment management
+- Ensures all team members get identical dependency versions
+
+#### Option B: Using pip (Traditional)
 
 ```bash
-uv sync
+# Create virtual environment
+python -m venv .venv
+
+# Activate virtual environment
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+# Upgrade pip
+python -m ensurepip --upgrade
+python -m pip install --upgrade pip
+
+# Install dependencies
+python -m pip install -r requirements.txt
 ```
 
 ### 3. Set environment variables
